@@ -12,5 +12,13 @@ services:
     # - /tmp/jenkins_home:/var/jenkins_home:rw
     networks:
       - net
+
+  tomcat:
+    container_name: tomcat
+    image: tomcat
+    ports:
+      - "8888:8080"
+    networks:
+      - net
 networks:
   net:
